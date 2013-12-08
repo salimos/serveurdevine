@@ -68,12 +68,6 @@ class PicsController < ApplicationController
     end
   end
 
-  def api
-    puts params[:mot]
-    @pics = Pic.all
-    render action: 'index'
-  end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
