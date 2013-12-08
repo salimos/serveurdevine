@@ -9,6 +9,11 @@ class PicsController < ApplicationController
     @pics = Pic.all
   end
 
+  def multi
+    @pics = Pic.all_except(params[:sender])
+  
+  end
+
   # GET /pics/1
   # GET /pics/1.json
   def show
