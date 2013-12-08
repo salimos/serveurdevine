@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Src:</strong>
+  <img src="data:image/png;base64,<%= @pic.src %>" />
+  <img src="<%= @pic.src %>" />
+
+  
+</p>
+
+<p>
+  <strong>Mot:</strong>
+  <%= @pic.mot %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @pic.sender %>
+</p>
+
+<%= link_to 'Edit', edit_pic_path(@pic) %> |
+<%= link_to 'Back', pics_path %>
