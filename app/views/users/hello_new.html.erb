@@ -1,5 +1,6 @@
+<CENTER>
 <h1>Register your Username</h1>
-<h2>PIN : <%= params[:pin] %></h2>
+<h2>PIN : <%= @pin %></h2>
 
 
 <%= form_for(@user) do |f| %>
@@ -21,9 +22,10 @@
   </div>
   <div class="field">
     <%= f.label :pin %><br>
-    <%= f.text_field :pin %>
+    <input id="user_pin" name="user[pin]" type="text" value="<%= @pin %>" readonly/>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</CENTER>

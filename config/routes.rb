@@ -14,6 +14,8 @@ Rserv::Application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'get/:sender' => 'pics#multi'
   get 'hello/:pin' => 'users#hello'
+  get 'hello_new' => 'users#hello_new'
+  post 'hello/:pin' => 'users#hello_create'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
