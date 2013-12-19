@@ -17,6 +17,17 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def hello
+
+    @user = User.where(pin: params[:pin])
+    if !@user.blank?
+      render hello
+    else
+      render :hello_new
+    end
+  end
+
+
   # GET /users/1/edit
   def edit
   end
