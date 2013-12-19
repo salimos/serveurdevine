@@ -1,4 +1,6 @@
 Rserv::Application.routes.draw do
+  resources :users
+
   resources :pics
 
   get "welcome/index"
