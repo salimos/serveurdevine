@@ -1,7 +1,8 @@
 <CENTER>
-<h1>Register your Username</h1>
-<h2>PIN : <%= @pin %></h2>
-
+<br><br><br><br>
+<h2>Guess/Draw</h2>
+<h4>This is your first time here, can register please </h4>
+<br><br><br>
 
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
@@ -17,7 +18,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <label for="user_name">Username</label><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
@@ -25,7 +26,7 @@
     <input id="user_pin" name="user[pin]" type="text" value="<%= @pin %>" readonly/>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Register"%>
   </div>
 <% end %>
 </CENTER>

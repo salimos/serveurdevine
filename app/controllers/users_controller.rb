@@ -22,6 +22,11 @@ class UsersController < ApplicationController
     @user = User.where(pin: params[:pin])
     if !@user.blank?
       render :hello
+      puts "********************************************"
+      puts @user.name
+      puts @user.pin
+      puts @user.id
+      puts "********************************************"      
     else
       redirect_to hello_new_path(pin: params[:pin])
     end
