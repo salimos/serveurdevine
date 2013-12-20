@@ -19,14 +19,9 @@ class UsersController < ApplicationController
 
   ########## HELLO && HELLO NEW , thx github.com/subroot :* #############
   def hello
-    @user = User.where(pin: params[:pin])
+    @user = User.where(pin: params[:pin]).first   
     if !@user.blank?
       render :hello
-      puts "********************************************"
-      puts @user.name
-      puts @user.pin
-      puts @user.id
-      puts "********************************************"      
     else
       redirect_to hello_new_path(pin: params[:pin])
     end
